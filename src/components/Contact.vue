@@ -32,10 +32,10 @@ const submitForm = () => {
               联系我们
             </div>
             <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-6">
-              开启您的AI转型之旅
+              开启您的工厂自动化升级之旅
             </h2>
             <p class="text-gray-dark text-lg mb-8">
-              填写表单或直接联系我们，获取免费演示和定制化解决方案，我们的专家团队将在24小时内与您联系。
+              填写表单或直接联系我们，获取免费现场勘测和定制化解决方案，我们的工程师将在2小时内与您联系。
             </p>
 
             <div class="space-y-6">

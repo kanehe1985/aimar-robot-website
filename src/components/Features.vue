@@ -1,34 +1,34 @@
 <script setup lang="ts">
 const features = [
   {
+    icon: '👨💻',
+    title: '资深技术团队',
+    description: '10年以上自动化行业经验，工程师占比70%，精通非标定制、视觉检测、智能产线改造。'
+  },
+  {
+    icon: '⏱️',
+    title: '本地快速响应',
+    description: '宁波本地服务商，2小时内响应，48小时上门服务，售后无忧，不用等外地厂商排期。'
+  },
+  {
     icon: '⚡',
-    title: '提升效率',
-    description: '自动化处理重复性任务，释放员工时间专注于高价值工作，智能调度根据任务类型自动匹配最佳AI模型。'
+    title: '30天快速交付',
+    description: '标准化产品+模块化定制，比行业平均交付速度快50%，30天即可上线投产。'
   },
   {
-    icon: '💰',
-    title: '降低成本',
-    description: '开源免费无许可费用，企业可自由部署和定制，本地部署支持保护数据隐私，避免云端存储成本。'
+    icon: '💸',
+    title: '高性价比方案',
+    description: '按需定制，拒绝过度设计，综合成本比同行低20%，终身提供成本价维保服务。'
   },
   {
-    icon: '🚀',
-    title: '增强能力',
-    description: '支持多种AI模型，满足不同任务需求，插件化架构支持快速开发和集成新功能，企业级安全保障。'
+    icon: '✅',
+    title: '量化验收标准',
+    description: '所有项目都有明确的量化验收指标，厂内预调试，现场安装后即可达到设计标准。'
   },
   {
-    icon: '🔒',
-    title: '安全可靠',
-    description: '支持本地部署，数据完全自主掌控，符合法规要求，企业级权限管理和数据加密机制。'
-  },
-  {
-    icon: '🔌',
-    title: '灵活集成',
-    description: '强大的API和插件系统，无缝对接企业现有系统，支持定制开发满足个性化需求。'
-  },
-  {
-    icon: '📊',
-    title: '智能分析',
-    description: '自动处理和分析业务数据，提供数据洞察和决策建议，自动生成各类业务报告。'
+    icon: '🛡️',
+    title: '终身维保服务',
+    description: '所有项目提供终身技术支持，定期巡检，24小时故障响应，设备升级成本价。'
   }
 ]
 </script>
@@ -44,7 +44,7 @@ const features = [
           为什么选择艾马机器人
         </h2>
         <p class="text-gray-dark text-lg">
-          我们提供完整的企业级智能工作助理解决方案，帮助企业快速实现数字化转型，提升核心竞争力
+          专注工业自动化领域，为宁波本地制造企业提供从方案设计、生产安装到售后维保的全流程服务，让工厂自动化改造少走弯路
         </p>
       </div>
 
@@ -66,16 +66,16 @@ const features = [
       <div class="mt-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 md:p-12">
         <div class="grid md:grid-cols-3 gap-8 items-center">
           <div class="text-center">
-            <div class="text-4xl font-bold text-primary mb-2">70%</div>
-            <p class="text-gray-dark">平均运营成本降低</p>
+            <div class="text-4xl font-bold text-primary mb-2">40%</div>
+            <p class="text-gray-dark">平均人力成本降低</p>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-primary mb-2">3倍</div>
-            <p class="text-gray-dark">工作效率提升</p>
+            <div class="text-4xl font-bold text-primary mb-2">2.5倍</div>
+            <p class="text-gray-dark">生产效率提升</p>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-primary mb-2">99.9%</div>
-            <p class="text-gray-dark">系统可用性</p>
+            <div class="text-4xl font-bold text-primary mb-2">99.7%</div>
+            <p class="text-gray-dark">设备稼动率</p>
           </div>
         </div>
       </div>

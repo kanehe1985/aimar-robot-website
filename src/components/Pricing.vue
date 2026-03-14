@@ -1,54 +1,52 @@
 <script setup lang="ts">
 const pricingPlans = [
   {
-    name: '基础版',
-    price: '999',
-    period: '/月',
-    description: '适合小型团队和初创企业',
+    name: '标准工作站',
+    price: '5万起',
+    period: '',
+    description: '标准化成熟产品，快速部署',
     features: [
-      '最多10个用户账号',
-      '基础自动化工作流',
-      '3个常用AI模型',
-      '10GB存储空间',
-      '标准技术支持',
-      '基础API调用额度'
+      '螺丝锁付工作站',
+      '视觉检测工作站',
+      '搬运码垛工作站',
+      '焊接装配工作站',
+      '7天现场安装',
+      '1年免费维保',
+      '2小时上门响应'
     ],
     highlight: false,
-    cta: '免费试用14天'
+    cta: '了解详情'
   },
   {
-    name: '专业版',
-    price: '2999',
-    period: '/月',
-    description: '适合中型企业和成长型团队',
+    name: '非标定制项目',
+    price: '10万起',
+    period: '',
+    description: '按需定制，满足特殊生产需求',
     features: [
-      '最多50个用户账号',
-      '高级自动化工作流',
-      '10个主流AI模型',
-      '100GB存储空间',
-      '优先技术支持',
-      '高级API调用额度',
-      '自定义功能开发',
-      '数据看板和分析'
+      '免费现场勘测',
+      '3D仿真方案设计',
+      '厂内预调试',
+      '30天快速交付',
+      '量化验收标准',
+      '1年免费维保',
+      '终身成本价升级'
     ],
     highlight: true,
-    cta: '立即购买'
+    cta: '获取方案'
   },
   {
-    name: '企业版',
+    name: '整厂自动化改造',
     price: '定制',
     period: '',
-    description: '适合大型企业和定制化需求',
+    description: '整厂产线规划，交钥匙工程',
     features: [
-      '无限用户账号',
-      '全功能工作流引擎',
-      '全部AI模型支持',
-      '无限存储空间',
-      '专属客户经理',
-      '本地部署支持',
-      '深度定制开发',
-      'SLA服务保障',
-      '安全审计和合规'
+      '整厂自动化规划设计',
+      'MES系统对接',
+      '数字孪生可视化',
+      '分阶段实施',
+      '项目经理全程跟进',
+      '2年免费维保',
+      '专属技术团队'
     ],
     highlight: false,
     cta: '联系我们'
@@ -61,13 +59,13 @@ const pricingPlans = [
     <div class="container mx-auto px-4">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-          价格方案
+          项目报价
         </div>
         <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">
-          灵活的定价方案，适合不同规模的企业
+          透明的价格体系，拒绝隐形消费
         </h2>
         <p class="text-gray-dark text-lg">
-          按需选择，灵活扩展，支持定制化部署，满足您的业务发展需求
+          标准化产品明码实价，定制化项目按需报价，所有费用透明化，让您每一分钱都花在实处
         </p>
       </div>
 
@@ -132,7 +130,7 @@ const pricingPlans = [
 
       <div class="mt-12 text-center">
         <p class="text-gray-dark">
-          所有方案均提供 7 天无理由退款保证 · 支持按月/按年付费 · 年付享 8 折优惠
+          所有项目均签订正式合同 · 明确验收标准 · 免费上门培训 · 终身技术支持
         </p>
       </div>
     </div>
