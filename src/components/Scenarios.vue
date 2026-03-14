@@ -28,39 +28,39 @@ const scenarios = [
 </script>
 
 <template>
-  <section id="scenarios" class="py-24 bg-gray-light/30">
+  <section id="scenarios" class="bg-gray-light/30">
     <div class="container mx-auto px-4">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+      <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+        <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
           应用场景
         </div>
-        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">
-          核心业务范围
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-900 mb-6">
+          行业应用
         </h2>
-        <p class="text-gray-dark text-lg">
-          专注工业自动化领域，覆盖从单工位工作站到整厂自动化改造的全场景需求，为制造企业提供一站式解决方案
+        <p class="text-gray-600 text-lg">
+          覆盖汽车零部件、电子制造、五金加工、食品医药、新能源等多个行业，提供针对性的自动化解决方案
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-10 mb-16">
         <div 
           v-for="(scenario, index) in scenarios" 
           :key="index"
-          class="card fade-in"
-          :style="{ animationDelay: `${index * 0.1}s` }"
+          class="card reveal"
+          :class="`reveal-delay-${index % 2 + 1}`"
         >
           <div class="flex gap-6">
             <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
               <span class="text-3xl">{{ scenario.icon }}</span>
             </div>
             <div class="flex-1">
-              <h3 class="text-xl font-bold text-dark mb-3">{{ scenario.title }}</h3>
-              <p class="text-gray-dark mb-4">{{ scenario.description }}</p>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">{{ scenario.title }}</h3>
+              <p class="text-gray-600 mb-4">{{ scenario.description }}</p>
               <div class="grid grid-cols-2 gap-2">
                 <div 
                   v-for="(feature, fIndex) in scenario.features" 
                   :key="fIndex"
-                  class="flex items-center gap-2 text-sm text-gray-dark"
+                  class="flex items-center gap-2 text-sm text-gray-600"
                 >
                   <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />

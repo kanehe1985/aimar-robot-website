@@ -24,6 +24,7 @@ const cases = [
   },
   {
     company: '宁波某食品有限公司',
+    logo: '🍜',
     problem: '成品装箱码垛人工劳动强度大，招工难，效率低',
     solution: '定制自动装箱+码垛系统，24小时不间断运行',
     results: [
@@ -47,49 +48,49 @@ const cases = [
 </script>
 
 <template>
-  <section id="cases" class="py-24 bg-white">
+  <section id="cases" class="bg-white">
     <div class="container mx-auto px-4">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+      <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+        <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
           成功案例
         </div>
-        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-900 mb-6">
           宁波本地客户案例
         </h2>
-        <p class="text-gray-dark text-lg">
+        <p class="text-gray-600 text-lg">
           已为30+宁波本地制造企业提供自动化改造服务，熟悉本地企业需求，服务响应更快
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-10 mb-16">
         <div 
           v-for="(caseItem, index) in cases" 
           :key="index"
-          class="card fade-in"
-          :style="{ animationDelay: `${index * 0.1}s` }"
+          class="card reveal"
+          :class="`reveal-delay-${index % 2 + 1}`"
         >
           <div class="flex items-center gap-4 mb-6">
             <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-3xl">
               {{ caseItem.logo }}
             </div>
             <div>
-              <h3 class="text-xl font-bold text-dark">{{ caseItem.company }}</h3>
+              <h3 class="text-xl font-bold text-gray-900">{{ caseItem.company }}</h3>
             </div>
           </div>
           
-          <div class="space-y-4">
+          <div class="space-y-5">
             <div>
-              <div class="text-sm font-medium text-gray-dark mb-1">面临的问题</div>
-              <p class="text-dark">{{ caseItem.problem }}</p>
+              <div class="text-sm font-medium text-gray-500 mb-2">面临的问题</div>
+              <p class="text-gray-800">{{ caseItem.problem }}</p>
             </div>
             
             <div>
-              <div class="text-sm font-medium text-gray-dark mb-1">解决方案</div>
-              <p class="text-dark">{{ caseItem.solution }}</p>
+              <div class="text-sm font-medium text-gray-500 mb-2">解决方案</div>
+              <p class="text-gray-800">{{ caseItem.solution }}</p>
             </div>
             
             <div>
-              <div class="text-sm font-medium text-gray-dark mb-2">取得的成果</div>
+              <div class="text-sm font-medium text-gray-500 mb-3">取得的成果</div>
               <div class="space-y-2">
                 <div 
                   v-for="(result, rIndex) in caseItem.results" 

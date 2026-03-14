@@ -9,19 +9,19 @@ const quickLinks = [
 ]
 
 const solutions = [
-  { label: '客户服务自动化', href: '#' },
-  { label: '内部协作优化', href: '#' },
-  { label: '业务流程自动化', href: '#' },
-  { label: '技术支持自动化', href: '#' },
-  { label: '定制化解决方案', href: '#' },
+  { label: '非标自动化定制', href: '#scenarios' },
+  { label: '标准智能工作站', href: '#products' },
+  { label: '现有产线改造', href: '#scenarios' },
+  { label: '机器视觉检测', href: '#scenarios' },
+  { label: '整厂自动化改造', href: '#products' },
 ]
 
 const resources = [
-  { label: '帮助中心', href: '#' },
-  { label: '开发文档', href: '#' },
-  { label: 'API文档', href: '#' },
-  { label: '合作伙伴', href: '#' },
-  { label: '隐私政策', href: '#' },
+  { label: '成功案例', href: '#cases' },
+  { label: '关于我们', href: '#about' },
+  { label: '免费方案咨询', href: '#contact' },
+  { label: '常见问题', href: '#contact' },
+  { label: '服务流程', href: '#features' },
 ]
 </script>
 
@@ -37,7 +37,7 @@ const resources = [
             <span class="text-xl font-bold text-white">艾马机器人</span>
           </div>
           <p class="text-gray-medium mb-6">
-            企业级智能工作助理平台，帮助企业提升效率、降低成本、实现数字化转型。
+            宁波本地自动化解决方案服务商，为制造企业提供非标定制、产线改造、视觉检测服务。
           </p>
           <div class="flex space-x-4">
             <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center transition-colors hover:bg-primary">
@@ -95,7 +95,7 @@ const resources = [
       <div class="border-t border-white/10 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <p class="text-gray-medium text-sm mb-4 md:mb-0">
-            © 2024 艾马机器人(宁波)有限公司 版权所有 | 浙ICP备XXXXXX号
+            © 2026 艾马机器人(宁波)有限公司 版权所有 | 浙ICP备XXXXXX号
           </p>
           <div class="flex space-x-6">
             <a href="#" class="text-gray-medium hover:text-white text-sm transition-colors">隐私政策</a>

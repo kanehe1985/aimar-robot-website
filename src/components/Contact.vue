@@ -23,10 +23,10 @@ const submitForm = () => {
 </script>
 
 <template>
-  <section id="contact" class="py-24 bg-white">
+  <section id="contact" class="bg-gray-light/30">
     <div class="container mx-auto px-4">
       <div class="max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12">
+        <div class="grid md:grid-cols-2 gap-16 md:gap-20 reveal">
           <div>
             <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
               联系我们

@@ -34,37 +34,37 @@ const features = [
 </script>
 
 <template>
-  <section id="features" class="py-24 bg-white">
+  <section id="features" class="bg-gray-light/30">
     <div class="container mx-auto px-4">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+      <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+        <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
           核心优势
         </div>
-        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-900 mb-6">
           为什么选择艾马机器人
         </h2>
-        <p class="text-gray-dark text-lg">
+        <p class="text-gray-600 text-lg">
           专注工业自动化领域，为宁波本地制造企业提供从方案设计、生产安装到售后维保的全流程服务，让工厂自动化改造少走弯路
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mb-20">
         <div 
           v-for="(feature, index) in features" 
           :key="index"
-          class="card fade-in"
-          :style="{ animationDelay: `${index * 0.1}s` }"
+          class="card reveal"
+          :class="`reveal-delay-${index % 3 + 1}`"
         >
-          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
             <span class="text-2xl">{{ feature.icon }}</span>
           </div>
-          <h3 class="text-xl font-bold text-dark mb-3">{{ feature.title }}</h3>
-          <p class="text-gray-dark">{{ feature.description }}</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">{{ feature.title }}</h3>
+          <p class="text-gray-600">{{ feature.description }}</p>
         </div>
       </div>
 
-      <div class="mt-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 md:p-12">
-        <div class="grid md:grid-cols-3 gap-8 items-center">
+      <div class="mt-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-10 md:p-12">
+        <div class="grid md:grid-cols-3 gap-10 items-center">
           <div class="text-center">
             <div class="text-4xl font-bold text-primary mb-2">40%</div>
             <p class="text-gray-dark">平均人力成本降低</p>
