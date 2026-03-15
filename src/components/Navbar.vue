@@ -49,17 +49,17 @@ onUnmounted(() => {
 
         <!-- Desktop Navigation - 统一间距，严格对齐 -->
         <nav class="hidden lg:flex items-center">
-          <div class="flex items-center space-x-12 mr-8">
+          <div class="flex items-center space-x-16 mr-12">
             <a 
               v-for="item in navItems" 
               :key="item.label"
               :href="item.href"
-              class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-base"
+              class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-base px-2"
             >
               {{ item.label }}
             </a>
           </div>
-          <a href="#contact" class="btn-accent text-sm px-6 py-2.5 shadow-md hover:shadow-lg transition-all">
+          <a href="#contact" class="btn-accent text-sm px-8 py-2.5 shadow-md hover:shadow-lg transition-all">
             免费方案咨询
           </a>
         </nav>

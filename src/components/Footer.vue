@@ -62,7 +62,7 @@ const resources = [
           <h4 class="text-lg font-bold mb-6 text-center">快速链接</h4>
           <ul class="space-y-4 text-center">
             <li v-for="link in quickLinks" :key="link.label">
-              <a :href="link.href" class="text-gray-medium hover:text-white transition-colors py-1">
+              <a :href="link.href" class="text-gray-200 hover:text-white transition-colors py-1">
                 {{ link.label }}
               </a>
             </li>
@@ -73,7 +73,7 @@ const resources = [
           <h4 class="text-lg font-bold mb-6 text-center">解决方案</h4>
           <ul class="space-y-4 text-center">
             <li v-for="link in solutions" :key="link.label">
-              <a :href="link.href" class="text-gray-medium hover:text-white transition-colors py-1">
+              <a :href="link.href" class="text-gray-200 hover:text-white transition-colors py-1">
                 {{ link.label }}
               </a>
             </li>
@@ -84,7 +84,7 @@ const resources = [
           <h4 class="text-lg font-bold mb-6 text-center">资源中心</h4>
           <ul class="space-y-4 text-center">
             <li v-for="link in resources" :key="link.label">
-              <a :href="link.href" class="text-gray-medium hover:text-white transition-colors py-1">
+              <a :href="link.href" class="text-gray-200 hover:text-white transition-colors py-1">
                 {{ link.label }}
               </a>
             </li>
