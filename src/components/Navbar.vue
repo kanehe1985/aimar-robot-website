@@ -32,11 +32,7 @@ onUnmounted(() => {
 
 <template>
   <header 
-    class="fixed w-full top-0 z-50 transition-all duration-300"
-    :class="{
-      'bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200/50': scrolled,
-      'bg-transparent': !scrolled
-    }"
+    class="fixed w-full top-0 z-50 transition-all duration-300 bg-white shadow-sm border-b border-gray-200"
   >
     <div class="container mx-auto px-4 py-5">
       <div class="flex items-center justify-between">
