@@ -38,26 +38,28 @@ onUnmounted(() => {
       'bg-transparent': !scrolled
     }"
   >
-    <div class="container mx-auto px-4 py-4">
+    <div class="container mx-auto px-4 py-5">
       <div class="flex items-center justify-between">
-        <a href="#home" class="flex items-center space-x-3">
-          <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-xl">A</span>
+        <a href="#home" class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-primary rounded-md flex items-center justify-center shadow-md">
+            <span class="text-white font-bold text-2xl">A</span>
           </div>
-          <span class="text-xl font-bold text-gray-900">艾马机器人</span>
+          <span class="text-2xl font-bold text-gray-900 tracking-tight">艾马机器人</span>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center space-x-10">
-          <a 
-            v-for="item in navItems" 
-            :key="item.label"
-            :href="item.href"
-            class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium"
-          >
-            {{ item.label }}
-          </a>
-          <a href="#contact" class="btn-accent text-sm ml-2">
+        <!-- Desktop Navigation - 统一间距，严格对齐 -->
+        <nav class="hidden lg:flex items-center">
+          <div class="flex items-center space-x-12 mr-8">
+            <a 
+              v-for="item in navItems" 
+              :key="item.label"
+              :href="item.href"
+              class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-base"
+            >
+              {{ item.label }}
+            </a>
+          </div>
+          <a href="#contact" class="btn-accent text-sm px-6 py-2.5 shadow-md hover:shadow-lg transition-all">
             免费方案咨询
           </a>
         </nav>

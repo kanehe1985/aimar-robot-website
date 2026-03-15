@@ -69,53 +69,45 @@ const pricingPlans = [
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 md:gap-10 max-w-5xl mx-auto mb-12">
+      <!-- 统一间距，严格对齐，简化设计，去掉过多动画 -->
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
         <div 
           v-for="(plan, index) in pricingPlans" 
           :key="index"
-          class="rounded-2xl transition-all duration-500 relative group reveal"
+          class="rounded-lg transition-all duration-200 relative group reveal"
           :class="[
             plan.highlight 
-              ? 'bg-gradient-to-br from-primary to-primary-dark text-white shadow-2xl hover:shadow-2xl hover:-translate-y-4' 
-              : 'bg-white shadow-card hover:shadow-xl hover:-translate-y-3',
-            `reveal-delay-${index + 1}`
+              ? 'bg-primary text-white border-primary shadow-lg' 
+              : 'bg-white border border-gray-200 shadow-md hover:shadow-lg',
           ]"
         >
           <div 
             v-if="plan.highlight"
-            class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent text-white px-5 py-1.5 rounded-full text-sm font-semibold shadow-lg"
+            class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent text-white px-4 py-1 rounded text-sm font-semibold shadow-md"
           >
             推荐选择
           </div>
           
-          <div class="p-8">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-2xl font-bold">{{ plan.name }}</h3>
-              <div v-if="!plan.highlight" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-            </div>
-            <p :class="['mb-6', plan.highlight ? 'text-white/80' : 'text-gray-600']">{{ plan.description }}</p>
-            
-            <div class="mb-8">
-              <span class="text-4xl font-bold">{{ plan.price }}</span>
-              <span :class="['text-lg', plan.highlight ? 'text-white/70' : 'text-gray-500']">{{ plan.period }}</span>
+          <div class="p-6">
+            <div class="text-center mb-5">
+              <h3 class="text-xl font-bold mb-2">{{ plan.name }}</h3>
+              <p :class="plan.highlight ? 'text-white/80' : 'text-gray-600'">{{ plan.description }}</p>
             </div>
             
-            <ul class="space-y-3.5 mb-8">
+            <div class="text-center mb-6">
+              <span class="text-3xl font-bold">{{ plan.price }}</span>
+              <span :class="plan.highlight ? 'text-white/70' : 'text-gray-500'">{{ plan.period }}</span>
+            </div>
+            
+            <ul class="mb-6">
               <li 
                 v-for="(feature, fIndex) in plan.features" 
                 :key="fIndex"
-                class="flex items-center gap-3 transition-all duration-300 group-hover:translate-x-1"
+                class="flex items-center gap-3 py-1.5"
               >
                 <svg 
                   class="w-5 h-5 flex-shrink-0" 
-                  :class="[
-                    plan.highlight ? 'text-white/90' : 'text-primary',
-                    'transition-transform duration-300 group-hover:scale-110'
-                  ]"
+                  :class="[plan.highlight ? 'text-white/90' : 'text-primary']"
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -128,10 +120,10 @@ const pricingPlans = [
             
             <a 
               href="#contact"
-              class="block w-full text-center rounded-lg font-medium py-3.5 transition-all duration-300"
+              class="block w-full text-center rounded-lg font-medium py-3 transition-all duration-200"
               :class="{
-                'bg-primary text-white hover:bg-primary-dark hover:shadow-lg': !plan.highlight,
-                'bg-white text-primary hover:bg-gray-50 hover:shadow-lg': plan.highlight
+                'bg-primary text-white hover:bg-primary-dark hover:shadow-md': !plan.highlight,
+                'bg-white text-primary hover:bg-gray-50 hover:shadow-md': plan.highlight
               }"
             >
               {{ plan.cta }}

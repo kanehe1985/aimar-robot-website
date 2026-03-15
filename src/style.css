@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
 @theme {
-  /* 主色调 - 工业蓝，更稳重专业 */
-  --color-primary: oklch(0.58 0.18 255); /* #165DFF */
-  --color-primary-dark: oklch(0.5 0.16 255);
-  --color-primary-light: oklch(0.95 0.05 255);
+  /* 主色调 - 加深工业深蓝，更符合工业厚重感 */
+  --color-primary: oklch(0.42 0.18 255); /* #0F3A8C - 更深的工业蓝 */
+  --color-primary-dark: oklch(0.35 0.15 255); /* #0A2A66 - 更深的暗色 */
+  --color-primary-light: oklch(0.90 0.08 255); /* 浅蓝色，降低透明度 */
   
   /* 辅助色 - 橙色，用于突出CTA */
   --color-accent: oklch(0.68 0.18 50); /* #FF7D00 */
@@ -94,67 +94,40 @@ html {
   }
 }
 
-/* Animation classes */
+/* 减少动画效果，只保留必要的过渡，符合工业企业稳重专业风格 */
+/* 只保留基础的淡入效果，移除过多的分层延迟动画 */
 .fade-in {
-  animation: fadeIn 0.6s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
-/* Scroll reveal animations */
+/* 简化滚动展示，移除位移动画 */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.4s ease;
 }
 
 .reveal.active {
   opacity: 1;
-  transform: translateY(0);
 }
 
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+/* 移除分层延迟动画，保持页面稳重 */
 
-/* Stagger animation for lists */
-.stagger-item {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: staggerReveal 0.5s ease-out forwards;
-}
-
-@keyframes staggerReveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.stagger-item:nth-child(1) { animation-delay: 0ms; }
-.stagger-item:nth-child(2) { animation-delay: 100ms; }
-.stagger-item:nth-child(3) { animation-delay: 200ms; }
-.stagger-item:nth-child(4) { animation-delay: 300ms; }
-.stagger-item:nth-child(5) { animation-delay: 400ms; }
-.stagger-item:nth-child(6) { animation-delay: 500ms; }
-
-/* Button styles */
+/* Button styles - 减少位移动画，保持稳重 */
 .btn-primary {
-  @apply bg-primary text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  @apply bg-primary text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-primary-dark hover:shadow-lg active:shadow-sm;
 }
 
 .btn-secondary {
-  @apply border-2 border-primary text-primary px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-primary/5 hover:shadow-md;
+  @apply border-2 border-primary text-primary px-8 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-primary/5 hover:shadow-md;
 }
 
 /* Section spacing */
@@ -171,31 +144,25 @@ section {
   padding-block: clamp(3rem, 2rem + 5vw, 6rem);
 }
 
-/* Card styles */
+/* Card styles - 简化设计，去掉多余装饰，增加稳重感 */
 .card {
-  @apply bg-white rounded-xl shadow-card p-8 transition-all duration-400 hover:shadow-lg hover:-translate-y-1.5 h-full border border-gray-200/50 relative overflow-hidden;
+  @apply bg-white rounded-lg shadow-md transition-all duration-200 hover:shadow-lg h-full border border-gray-200;
+  padding: 2rem; /* 统一适中的留白 */
 }
 
-.card::before {
-  content: '';
-  @apply absolute top-0 left-0 w-0 h-1 bg-primary transition-all duration-400;
-}
+/* 去掉左侧进度条装饰，保持简洁 */
 
-.card:hover::before {
-  @apply w-full;
-}
-
-/* Button styles */
+/* Button styles - 减少位移动画，保持稳重 */
 .btn-primary {
-  @apply bg-primary text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  @apply bg-primary text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-primary-dark hover:shadow-lg active:shadow-sm;
 }
 
 .btn-secondary {
-  @apply border-2 border-primary text-primary px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-primary/5 hover:shadow-md;
+  @apply border-2 border-primary text-primary px-8 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-primary/5 hover:shadow-md;
 }
 
 .btn-accent {
-  @apply bg-accent text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-accent-dark hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0;
+  @apply bg-accent text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-accent-dark hover:shadow-lg active:shadow-sm;
 }
 
 /* Typography scale */
@@ -218,8 +185,8 @@ h3 {
 }
 
 p {
-  line-height: 1.75;
-  margin-bottom: 1rem;
+  line-height: 1.85;
+  margin-bottom: 2rem; /* 32px paragraph spacing */
 }
 
 p:last-child {
@@ -227,13 +194,13 @@ p:last-child {
 }
 
 ul, ol {
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
 }
 
 li {
-  line-height: 1.75;
-  margin-bottom: 0.5rem;
+  line-height: 1.85;
+  margin-bottom: 1rem;
 }
 
 /* Accessibility */

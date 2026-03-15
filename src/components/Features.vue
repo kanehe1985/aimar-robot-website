@@ -1,32 +1,26 @@
 <script setup lang="ts">
 const features = [
   {
-    icon: '👨💻',
     title: '资深技术团队',
     description: '10年以上自动化行业经验，工程师占比70%，精通非标定制、视觉检测、智能产线改造。'
   },
   {
-    icon: '⏱️',
     title: '本地快速响应',
     description: '宁波本地服务商，2小时内响应，48小时上门服务，售后无忧，不用等外地厂商排期。'
   },
   {
-    icon: '⚡',
     title: '30天快速交付',
     description: '标准化产品+模块化定制，比行业平均交付速度快50%，30天即可上线投产。'
   },
   {
-    icon: '💸',
     title: '高性价比方案',
     description: '按需定制，拒绝过度设计，综合成本比同行低20%，终身提供成本价维保服务。'
   },
   {
-    icon: '✅',
     title: '量化验收标准',
     description: '所有项目都有明确的量化验收指标，厂内预调试，现场安装后即可达到设计标准。'
   },
   {
-    icon: '🛡️',
     title: '终身维保服务',
     description: '所有项目提供终身技术支持，定期巡检，24小时故障响应，设备升级成本价。'
   }
@@ -48,18 +42,15 @@ const features = [
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mb-20">
+      <!-- 统一间距，严格对齐，文字全部居中，留白充足 -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         <div 
           v-for="(feature, index) in features" 
           :key="index"
           class="card reveal"
-          :class="`reveal-delay-${index % 3 + 1}`"
         >
-          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
-            <span class="text-2xl">{{ feature.icon }}</span>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">{{ feature.title }}</h3>
-          <p class="text-gray-600">{{ feature.description }}</p>
+          <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">{{ feature.title }}</h3>
+          <p class="text-gray-600 text-center leading-relaxed">{{ feature.description }}</p>
         </div>
       </div>
 
