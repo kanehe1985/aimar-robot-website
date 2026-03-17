@@ -57,7 +57,7 @@
         <div class="lg:col-span-2">
           <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div class="relative">
-              <img src="/assets/robot.jpg" alt="现代工业机器人自动化手臂" class="w-full h-80 object-cover" loading="eager" fetchpriority="high">
+              <img src="https://images.unsplash.com/photo-1581091266863-a2da8df87f8ce?auto=format&fit=crop&w=800&h=600" alt="现代工业机器人自动化手臂" class="w-full h-80 object-cover" loading="eager" fetchpriority="high">
               <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-8">
                 <div>
                   <div class="text-white text-2xl font-bold mb-2">交钥匙工程</div>
