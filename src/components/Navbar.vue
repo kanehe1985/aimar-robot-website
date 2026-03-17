@@ -6,8 +6,8 @@ const scrolled = ref(false)
 
 const navItems = [
   { label: '首页', href: '#home' },
-  { label: '产品中心', href: '#products' },
-  { label: '行业应用', href: '#scenarios' },
+  { label: '核心优势', href: '#features' },
+  { label: '解决方案', href: '#scenarios' },
   { label: '成功案例', href: '#cases' },
   { label: '关于我们', href: '#about' },
   { label: '联系我们', href: '#contact' },
@@ -32,30 +32,30 @@ onUnmounted(() => {
 
 <template>
   <header 
-    class="fixed w-full top-0 z-50 transition-all duration-300 bg-white shadow-sm border-b border-gray-200"
+    class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-md py-4"
   >
-    <div class="container mx-auto px-4 py-5">
+    <div class="container mx-auto px-4 max-w-[1280px]">
       <div class="flex items-center justify-between">
-        <a href="#home" class="flex items-center space-x-4">
-          <div class="w-12 h-12 bg-primary rounded-md flex items-center justify-center shadow-md">
-            <span class="text-white font-bold text-2xl">A</span>
+        <a href="#home" class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-accent rounded-xl flex items-center justify-center shadow-lg">
+            <span class="text-white font-bold text-xl">A</span>
           </div>
-          <span class="text-2xl font-bold text-gray-900 tracking-tight">艾马机器人</span>
+          <span class="text-xl font-bold text-gray-900 tracking-tight">艾马机器人</span>
         </a>
 
-        <!-- Desktop Navigation - 统一间距，严格对齐 -->
+        <!-- Desktop Navigation -->
         <nav class="hidden lg:flex items-center">
-          <div class="flex items-center space-x-16 mr-12">
+          <div class="flex items-center gap-8 mr-8">
             <a 
               v-for="item in navItems" 
               :key="item.label"
               :href="item.href"
-              class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-base px-2"
+              class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium px-4 py-2"
             >
               {{ item.label }}
             </a>
           </div>
-          <a href="#contact" class="btn-accent text-sm px-8 py-2.5 shadow-md hover:shadow-lg transition-all">
+          <a href="#contact" class="btn-accent px-8 py-5 shadow-md hover:shadow-lg transition-all rounded-xl">
             免费方案咨询
           </a>
         </nav>
@@ -96,8 +96,8 @@ onUnmounted(() => {
             >
               {{ item.label }}
             </a>
-            <div class="pt-2 px-4">
-              <a href="#contact" class="btn-accent block text-center text-sm" @click="closeMenu">
+            <div class="pt-2 px-4 pb-3">
+              <a href="#contact" class="btn-accent block text-center" @click="closeMenu">
                 免费方案咨询
               </a>
             </div>

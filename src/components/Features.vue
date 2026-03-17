@@ -28,13 +28,13 @@ const features = [
 </script>
 
 <template>
-  <section id="features" class="bg-gray-light/30">
+  <section id="features" class="py-24 bg-white">
     <div class="container mx-auto px-4">
-      <div class="text-center max-w-3xl mx-auto mb-20 reveal">
-        <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-lg text-sm font-medium mb-6">
           核心优势
         </div>
-        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-900 mb-6">
+        <h2 class="text-[clamp(1.8rem,3vw,2.8rem)] font-bold text-gray-900 mb-6">
           为什么选择艾马机器人
         </h2>
         <p class="text-gray-600 text-lg">
@@ -42,31 +42,37 @@ const features = [
         </p>
       </div>
 
-      <!-- 统一间距，严格对齐，文字全部居中，留白充足 -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      <!-- 现代卡片设计：圆角更大，阴影更柔和，图标点缀 -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
         <div 
           v-for="(feature, index) in features" 
           :key="index"
-          class="card reveal"
+          class="bg-gray-50 border-0 rounded-2xl p-8 shadow-sm hover:shadow-card hover:-translate-y-1 transition-all duration-300 reveal"
         >
-          <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">{{ feature.title }}</h3>
-          <p class="text-gray-600 text-center leading-relaxed">{{ feature.description }}</p>
+          <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">{{ feature.title }}</h3>
+          <p class="text-gray-600 leading-relaxed">{{ feature.description }}</p>
         </div>
       </div>
 
-      <div class="mt-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-10 md:p-12">
-        <div class="grid md:grid-cols-3 gap-10 items-center">
-          <div class="text-center">
-            <div class="text-4xl font-bold text-primary mb-2">40%</div>
-            <p class="text-gray-dark">平均人力成本降低</p>
+      <!-- 数据亮点块 -->
+      <div class="bg-gradient-to-r from-primary to-primary-dark rounded-3xl p-10 md:p-16 text-white">
+        <div class="grid md:grid-cols-3 gap-10 text-center">
+          <div>
+            <div class="text-accent font-black text-5xl mb-3">40%</div>
+            <p class="text-white/80 text-lg">平均人力成本降低</p>
           </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-primary mb-2">2.5倍</div>
-            <p class="text-gray-dark">生产效率提升</p>
+          <div>
+            <div class="text-accent font-black text-5xl mb-3">2.5×</div>
+            <p class="text-white/80 text-lg">生产效率提升</p>
           </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-primary mb-2">99.7%</div>
-            <p class="text-gray-dark">设备稼动率</p>
+          <div>
+            <div class="text-accent font-black text-5xl mb-3">99.7%</div>
+            <p class="text-white/80 text-lg">稳定设备稼动率</p>
           </div>
         </div>
       </div>

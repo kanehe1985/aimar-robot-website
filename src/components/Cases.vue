@@ -44,57 +44,55 @@ const cases = [
 </script>
 
 <template>
-  <section id="cases" class="bg-white">
+  <section id="cases" class="py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-        <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-md text-sm font-medium mb-6">
+        <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-lg text-sm font-medium mb-6">
           成功案例
         </div>
-        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-900 mb-6">
-          宁波本地客户案例
+        <h2 class="text-[clamp(1.8rem,3vw,2.8rem)] font-bold text-gray-900 mb-6">
+          宁波本地客户见证
         </h2>
         <p class="text-gray-600 text-lg">
-          已为30+宁波本地制造企业提供自动化改造服务，熟悉本地企业需求，服务响应更快
+          已为30+宁波本地制造企业提供自动化改造服务，熟悉本地企业需求，服务响应更快更贴心
         </p>
       </div>
 
-      <!-- 统一间距，去掉延迟动画和emoji图标 -->
-      <div class="grid md:grid-cols-2 gap-6 mb-16">
+      <!-- 现代卡片网格，更好的留白和阴影 -->
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
         <div 
           v-for="(caseItem, index) in cases" 
           :key="index"
-          class="card reveal"
+          class="bg-gray-50 border-0 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 reveal"
         >
-          <div class="text-center">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">{{ caseItem.company }}</h3>
+          <div class="bg-primary px-8 py-6">
+            <h3 class="text-xl font-bold text-white mb-1">{{ caseItem.company }}</h3>
           </div>
-          
-          <!-- 严格居中对齐，统一间距 -->
-          <div class="space-y-4 text-center">
+          <div class="p-8 space-y-6">
             <div>
-              <div class="text-sm font-medium text-gray-500 mb-2">面临的问题</div>
+              <div class="text-sm font-semibold text-primary mb-2">客户痛点</div>
               <p class="text-gray-700">{{ caseItem.problem }}</p>
             </div>
             
             <div>
-              <div class="text-sm font-medium text-gray-500 mb-2">解决方案</div>
+              <div class="text-sm font-semibold text-primary mb-2">解决方案</div>
               <p class="text-gray-700">{{ caseItem.solution }}</p>
             </div>
             
             <div>
-              <div class="text-sm font-medium text-gray-500 mb-3">取得的成果</div>
-              <div class="space-y-2">
+              <div class="text-sm font-semibold text-primary mb-3">改造成果</div>
+              <div class="grid grid-cols-1 gap-3">
                 <div 
                   v-for="(result, rIndex) in caseItem.results" 
                   :key="rIndex"
-                  class="flex items-center justify-center gap-2 text-gray-700"
+                  class="flex items-center gap-3 text-gray-700 bg-white p-3 rounded-xl"
                 >
                   <div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
-                    <svg class="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  {{ result }}
+                  <span class="font-medium">{{ result }}</span>
                 </div>
               </div>
             </div>
@@ -103,8 +101,8 @@ const cases = [
       </div>
 
       <div class="mt-16 text-center">
-        <a href="#contact" class="btn-secondary inline-flex items-center gap-2">
-          查看更多案例
+        <a href="#contact" class="btn-secondary text-lg inline-flex items-center gap-2 px-10 py-4 rounded-xl">
+          免费咨询获取方案
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
